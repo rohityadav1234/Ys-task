@@ -81,6 +81,7 @@ public class DepartmentController {
 	public ResponseEntity<?> deleteDepartment(@RequestParam("departmentId") int departmentId)throws DepartmentException {
 		ErrorResponseDto erdto = new ErrorResponseDto();
 		SuccessResponseDto sdto = new SuccessResponseDto();
+		
 		if (StringUtils.isEmpty(departmentId)) {
 			erdto.getMsg().add("field can not be empty");
 			erdto.setException(YsTaskException.FIELD_CAN_NOT_BE_EMPTY);
